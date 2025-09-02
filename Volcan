@@ -1,0 +1,22 @@
+{Vanessa Garcia Lara 301}
+program volcan;
+uses crt;
+var
+  anchoMax: integer;
+  ast: integer;
+  i: integer;
+begin
+  clrscr;
+  anchoMax := 64;
+  ast := 2; 
+  while ast <= anchoMax do
+  begin
+    for i := 1 to (anchoMax - ast) div 2 do 
+      write(' ');
+    for i := 1 to ast do 
+      write('*');
+    writeln;
+    ast := ast * 2;  
+  end;
+  readln;
+end.
