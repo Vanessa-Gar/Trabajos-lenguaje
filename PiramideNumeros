@@ -1,0 +1,33 @@
+{Vanessa Garcia Lara 301}
+Program piramide;
+var
+nFila: integer;
+ind: integer;
+cont: integer;
+fila: array[1..19] of integer;
+begin
+     for nFila:=1 to 10 do
+     begin
+          cont:=0;
+          for ind:=0 to (nFila-1) do
+          begin
+               fila[cont] := (nFila+ind) mod 10;
+               cont:=cont+1;
+          end;
+          for ind:=(nFila-2) downto 0 do
+          begin
+               fila[cont] := (nFila+ind) mod 10;
+               cont:=cont+1;
+          end;
+          for ind := 1 to (10-nFila) do
+          begin
+               write(' ');
+          end;
+          for ind := 0 to (cont-1) do
+          begin
+               write(fila[ind]);
+          end;
+          writeln;
+     end;
+     readln;
+end.
