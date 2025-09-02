@@ -1,0 +1,23 @@
+{Vanessa Garcia lara 301}
+program mosaicoAjedrez;
+uses crt;
+const
+  nFilas = 8;
+var
+  x: integer;
+  y: integer;
+begin
+  clrscr;
+  for y := 1 to nFilas do
+  begin
+    for x := 1 to nFilas do
+    begin
+      if (y + x) mod 2 = 0 then 
+        write('* ')
+      else
+        write('  ');
+    end;
+    writeln;
+  end;
+  readln;
+end.
